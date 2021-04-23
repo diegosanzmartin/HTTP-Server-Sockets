@@ -26,6 +26,9 @@ if __name__ == "__main__":
     #Conexión socket
     sock.bind(serv_addr)
     sock.listen(10)
+
+    print("-> Servidor activo en: ", serv_addr)
+
     inputs = [sock]                                                             #Lista de sockets de lectura
     outputs = []                                                                #Lista de sockets de escritura
     clientes = {}                                                               #Lista de clientes  
@@ -49,21 +52,47 @@ if __name__ == "__main__":
                     if dataRecv:
                         lines = dataRecv.split(b'\r\n')
                         method, uri, version = lines[0].split(b' ')
+                        uri = uri.decode("utf-8")
+                        method = method.decode("utf-8")
+                        version = version.decode("utf-8")
+                        print(method, uri, version)
+                        
+                        if uri == "/":
+                            data = open("index.html").read()
+                            data = str.encode(data)
+                            sck.send(b'HTTP/1.0 200 OK\r\nContent-Type: text/html\r\nContent-Length: %i\r\n\r\n' % len(data))
+                            sck.send(data)
 
-                        if uri == b'/' or uri == b'/index.html':
-                            sck.send(b'HTTP/1.1 200 OK\r\n\r\n')
-                            html = open("index.html").read()
-                            html = str.encode(html)
-                            sck.send(html)
+                        elif uri == "/login" and method == "GET":
+                            data = open("login.html").read()
+                            data = str.encode(data)
+                            sck.send(b'HTTP/1.0 200 OK\r\nContent-Type: text/html\r\nContent-Length: %i\r\n\r\n' % len(data))
+                            sck.send(data)
 
-                        elif uri == b'/favicon.ico':
-                            sck.send(b'HTTP/1.1 404 Not Found\r\n\r\n')
+                        elif uri == "/login" and method == "POST":
+                            print(dataRecv)
+
+                        elif uri == "favicon.ico":
+                            sck.send(b'HTTP/1.0 404 Not Found\r\n\r\n')
+
+                        elif uri.find("/css/") == 0:
+                            data = open(uri[1:]).read()
+                            data = str.encode(data)
+                            sck.send(b'HTTP/1.0 200 OK\r\nContent-Type: text/css\r\nContent-Length: %i\r\n\r\n' % len(data))
+                            sck.send(data)
+
+                        elif uri.find("/images/") == 0:
+                            with open(uri[1:], "rb") as image:
+                                data = image.read()
+
+                            sck.send(b'HTTP/1.0 200 OK\r\nContent-Type: image/jpeg\r\nContent-Length: %i\r\n\r\n' % len(data))
+                            sck.send(data)
 
                         else:
-                            sck.send(b'HTTP/1.1 200 OK\r\n\r\n')
-                            html = open("404.html").read()
-                            html = str.encode(html)
-                            sck.send(html)
+                            data = open("404.html").read()
+                            data = str.encode(data)
+                            sck.send(b'HTTP/1.0 200 OK\r\nContent-Type: text/html\r\nContent-Length: %i\r\n\r\n' % len(data))
+                            sck.send(data)
                     else:
                         outputs.remove(sck)                                     #Eliminamos el socket de la lista de outputs
                         inputs.remove(sck)                                      #Eliminamos el socket de la lista de inputs
