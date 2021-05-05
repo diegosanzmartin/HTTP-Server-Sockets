@@ -1,11 +1,11 @@
-html{
-    background-color: #8660BA;
-	background-size: cover;
-    min-height: 100%;
-}
-
 body{
 	background-color: transparent;
+}
+
+html{
+    background-color: #DC3545	;
+	background-size: cover;
+    min-height: 100%;
 }
 
 #registration-form{

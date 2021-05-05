@@ -1,27 +1,203 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>Sportacus Gym</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
   </head>
-  <body>
-    <h1 class="text-center mt-5 display-4 text-primary">Git Hub HTML Bootstrap</h1>
+  <body>  
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sportacus Gym</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" href="login">Iniciar sesión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="put">Put</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/carr1.jpg" class="d-block w-100">
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>SPORTACUS GYM</h1>
+                <p>Apúntate ya y conseguirás un descuento especial</p>
+                <p><a class="btn btn-lg btn-danger" href="/login">Regístrate ahora</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carr2.jpg" class="d-block w-100">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Actividades dirigidas</h1>
+                <p>Elige las que más te gusten y conviértete en un@ Sportacus</p>
+                <p><a class="btn btn-lg btn-danger" href="#">Descubre nuestras ofertas</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carr3.jpg" class="d-block w-100">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Maquinaria de alta gama</h1>
+                <p>Disfruta entrenando en las mejores instalaciones</p>
+                <p><a class="btn btn-lg btn-danger" href="/video">Vídeo demostrativo</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="images/circle1.jpg" class="rounded-circle" width="200px" lenght="200px">
+
+            <h2>Piscina</h2>
+            <p>Piscina abierta todas las mañanas para nuestr@s Sportacus más acuáticos.</p>
+            <p><a class="btn btn-secondary" href="#">Horarios &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="images/circle2.jpg" class="rounded-circle" width="200px" lenght="200px">
+
+            <h2>Disfruta con tus amigos</h2>
+            <p>Dos veces al mes podrás traerte a tus amigos para disfrutas de nuestras instalaciones de forma gratuita.</p>
+            <p><a class="btn btn-secondary" href="#">Más información &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img src="images/circle3.jpg" class="rounded-circle" width="200px" lenght="200px">
+
+            <h2>Rehabilitación</h2>
+            <p>Tenemos servicio de rehabilitación para tod@s aquellos que más lo necesiten.</p>
+            <p><a class="btn btn-secondary" href="#">Pide Cita &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+    <!--Pricing-->
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Tarifas</h1>
+        <p class="fs-5 text-muted">Aquí podrás consultar nuestros precios imbatibles</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Básica</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">25€<small class="text-muted fw-light">/mes</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>· Sala fitness con el mejor equipamiento</li>
+                <li>· Asesoramiento de nuestros profesionales</li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                <li></li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-danger">Apúntate</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Especial</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">40€<small class="text-muted fw-light">/mes</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>· Sala fitness con el mejor equipamiento</li>
+                <li>· Asesoramiento de nuestros profesionales</li>
+                <li>· Disponibilidad a todas nuestras clases</li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-danger">Apúntate</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-danger">
+            <div class="card-header py-3 text-white bg-danger border-danger">
+              <h4 class="my-0 fw-normal">Premium</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">60€<small class="text-muted fw-light">/mes</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>· Sala fitness con el mejor equipamiento</li>
+                <li>· Asesoramiento de nuestros profesionales</li>
+                <li>· Disponibilidad a todas nuestras clases</li>
+                <li>· Acceso a piscina olímpica</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-danger">Apúntate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>&copy; 2021 Sportacus Gym, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos y Condiciones</a></p>
+    </footer>
+    </main>        
   </body>
 </html>

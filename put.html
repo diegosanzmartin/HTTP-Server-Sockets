@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      <title>Registration Form</title>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <script src="js/put.js"></script>
+  </head>
+
+  <body>
+    <div class="container" id="registration-form">
+        <div class="image"></div>
+        <div class="frm">
+            <h1>PUT</h1>
+            <form action="/put" method="put">
+                <div class="form-group">
+                    <label for="data">Archivo: </label>
+                    <input id="data" name="data" type="file" class="form-control" accept="image/*, video/*, .html, .css, .js">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success btn-lg" onclick="doSubmit()">Subir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
